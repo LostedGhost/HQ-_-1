@@ -1,0 +1,53 @@
+from app.models import *
+
+###################################### PROFIL
+p = Profil(libelle="ADMINISTRATEUR")
+p.save()
+
+p = Profil(libelle="MEMBRE")
+p.save()
+
+###################################### UTILISATEUR
+membre = User(nom="ADMIN", prenom="Root", sexe=True, date_naissance=text_to_date("2002-03-26"),lieu_naissance="Cotonou", bio="Je suis l'administrateur", email="admin@gmail.com", password=chiffrement("0000"), profil_id=1)
+membre.save()
+
+###################################### TYPE PUBLICATION
+tp = TypePublication(libelle="ARTICLE")
+tp.save()
+
+tp = TypePublication(libelle="ARTICLE AVEC SUGGESTION A CONTACTER")
+tp.save()
+
+tp = TypePublication(libelle="IMAGE SUIVI D'ARTICLE")
+tp.save()
+
+tp = TypePublication(libelle="ARTICLE SUIVI D'IMAGE")
+tp.save()
+
+tp = TypePublication(libelle="VIDEO SUIVI D'ARTICLE")
+tp.save()
+
+tp = TypePublication(libelle="ARTICLE SUIVI DE VIDEO")
+tp.save()
+
+###################################### CENTRE INTERET
+ctr = CentreInteret(libelle="ECONOMIE")
+ctr.save()
+
+ctr = CentreInteret(libelle="SCIENCE")
+ctr.save()
+
+ctr = CentreInteret(libelle="SOCIAL")
+ctr.save()
+
+ctr = CentreInteret(libelle="CULTURE")
+ctr.save()
+
+ctr = CentreInteret(libelle="FOOTBALL")
+ctr.save()
+
+ctr = CentreInteret(libelle="BASKETBALL")
+ctr.save()
+
+ctr = CentreInteret(libelle="AUTRE")
+ctr.save()
